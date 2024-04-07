@@ -138,12 +138,14 @@
     <ProjectGuid>{CB8F90F3-3666-43E1-9C51-502337569FEF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>libdash</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -188,7 +190,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;wsock32.lib;$(SolutionDir)libxml2\lib\libxml2.lib;$(SolutionDir)iconv\lib\iconv.lib;$(SolutionDir)zlib\lib\zlib.lib;$(SolutionDir)libcurl\lib\libcurld_imp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;wsock32.lib;$(SolutionDir)libxml2\lib\libxml2.lib;$(SolutionDir)iconv\lib\iconv.lib;$(SolutionDir)zlib\lib\zlib.lib;$(SolutionDir)libcurl\lib\libcurl_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

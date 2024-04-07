@@ -108,7 +108,9 @@ Node*   DOMParser::ProcessNode              ()
            Node *node = new Node();
            node->SetType(type);
            node->SetText(text);
-           delete text;
+           xmlFree((void*)text);
+           //delete[] text;
+           //delete text;
            return node;
        }
     }
